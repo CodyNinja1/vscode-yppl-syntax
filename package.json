@@ -1,0 +1,25 @@
+{
+    "name": "yppl-compile",
+    "displayName": ".yppl",
+    "description": "Compile YPPL code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "yppl",
+            "aliases": ["UToober", "yppl"],
+            "extensions": [".yppl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "yppl",
+            "scopeName": "source.utoober",
+            "path": "./syntaxes/yppl.tmLanguage.json"
+        }]
+    }
+}
