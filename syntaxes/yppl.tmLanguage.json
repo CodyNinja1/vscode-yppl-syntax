@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "UToober",
+	"patterns": [
+		{
+			"include": "#reserved-words"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.yppl",
+				"match": "\\b(JUMPTOIFYOUWANTTO|JUMPTOIFYOUGOT>0|JUMPTOIFYOUGOT<=0)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"begin": "EDITORNOTE",
+				"end": " ",
+				"name": "comment.line.yppl"
+			}]
+		},
+		"reserved-words": {
+			"patterns": [{
+				"match": "\\b(COMMENTDOWNBELOWN|COMMENTDOWNBELOW|GOTOTHEDESCRIPTIONN|GOTOTHEDESCRIPTION|ADDTHISVIDEOTOYOURPLAYLIST|REMOVETHISVIDEOFROMYOURPLAYLIST|ADDLIKEALOT|SUBTRACTLIKEALOT|THX4WATCHING|LOOKATTHECARDINTHEUPPERRIGHTCORNER|LOOKATTHECARDINTHEUPPERLEFTCORNER)\\b",
+				"name": "entity.name.function.member.yppl"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "string.quoted.double.yppl",
+				"match": "[0-9]"
+			}]
+		}
+	},
+	"scopeName": "source.utoober"
+}
